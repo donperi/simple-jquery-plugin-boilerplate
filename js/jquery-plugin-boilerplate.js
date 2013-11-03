@@ -22,7 +22,7 @@
       },
 
       setName: function(name, lastname) {
-        cconsole.log(name + " " lastname)
+        console.log(name + " " lastname)
       },
 
       printThis: function() {
