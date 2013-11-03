@@ -1,10 +1,7 @@
 (function($) {
   
   var pluginName = "examplePlugin";
-  
-  //Global defaults
-  $.fn[pluginName].defaults = {}
-  
+    
   $.fn[pluginName] = function(options) {
     
     var args = arguments;
@@ -22,7 +19,7 @@
       },
 
       setName: function(name, lastname) {
-        cconsole.log(name + " " lastname)
+        console.log(name + " " + lastname)
       },
 
       printThis: function() {
@@ -59,7 +56,7 @@
             }
 
         if(!$(this).data(pluginName)) { 
-          options = $.extend({},$.fn[pluginName].defaults, defaults, option)
+          options = $.extend({},$.fn[pluginName].defaults, defaults, options)
           $(this).data(pluginName, new Plugin(this, options)) 
         }
     });
@@ -67,6 +64,9 @@
     return (ret === undefined) ? this : ret;
 
   } 
+
+  //Global defaults
+  $.fn[pluginName].defaults = {}
 
 
 })(jQuery)
