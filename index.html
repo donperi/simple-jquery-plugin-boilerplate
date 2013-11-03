@@ -1,0 +1,27 @@
+<html>
+<head>
+	<title>Example</title>
+</head>
+<body>
+
+<h1>Plugin example</h1>
+
+<input id="test" type="text" value="Test">
+
+
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script src="js/jquery-plugin-boilerplate.js"></script>
+
+<script>
+  $(function() {
+    $("#test").examplePlugin({isCool: true});
+    $("#test").examplePlugin("setName", "Trevol", "Philips");
+    instance = $("#test").data("examplePlugin");
+    instance.setName("Michael", "De Santa");
+    instance.printThis();
+  })
+</script>
+
+</body>
+</html
